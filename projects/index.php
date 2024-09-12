@@ -1,7 +1,9 @@
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
-//include_once('config/bootstrap.php');
+include('')
+
+//include_once('../../config/bootstrap.php');
 
 use App\SQLiteConnection as SQLiteConnection;
 use App\SQLiteTableList as SQLiteTableList;
@@ -11,13 +13,9 @@ $pdo = (new SQLiteConnection)->connect();
 $sqlite = new SQLiteTableList((new SQLiteConnection())->connect());
 
 // get the table list
-$tables = $sqlite->getTableList();
-
-$products = $sqlite->getProductsList();
+//$tables = $sqlite->getTableList();
 
 $projects = $sqlite->getProjectsList();
-
-$tasks = $sqlite->getTasksList();
 
 ?>
 <!DOCTYPE html>
@@ -39,22 +37,6 @@ $tasks = $sqlite->getTasksList();
             </div>
 
             <table class="table table-bordered">
-            <thead>
-                    <tr>
-                        <th>Products</th>
-                        <th>id</th>
-                        <th>name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($products as $product) : ?>
-                        <tr>
-                            <td>table</td>
-                            <td><?php echo $product->id; ?></td>
-                            <td><?php echo $product->name; ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
 
                 <thead>
                     <tr>
@@ -68,27 +50,11 @@ $tasks = $sqlite->getTasksList();
                         <tr>
                             <td>table</td>
                             <td><?php echo $project->id; ?></td>
-                            <td><a href="../projects/index.php"><?php echo $project->name; ?></a></td>
+                            <td><?php echo $project->name; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
 
-                <thead>
-                    <tr>
-                        <th>Tasks</th>
-                        <th>id</th>
-                        <th>name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($tasks as $task) : ?>
-                        <tr>
-                            <td>table</td>
-                            <td><?php echo $task->id; ?></td>
-                            <td><?php echo $task->name; ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
             </table>
         </div>
     </body>
