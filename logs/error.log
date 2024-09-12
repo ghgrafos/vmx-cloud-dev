@@ -1,0 +1,9 @@
+[Wed Sep 11 17:16:12.554947 2024] [core:warn] [pid 5768:tid 428] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Sep 11 17:16:12.611947 2024] [mpm_winnt:notice] [pid 5768:tid 428] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Wed Sep 11 17:16:12.611947 2024] [mpm_winnt:notice] [pid 5768:tid 428] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Wed Sep 11 17:16:12.611947 2024] [core:notice] [pid 5768:tid 428] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Wed Sep 11 17:16:12.615945 2024] [mpm_winnt:notice] [pid 5768:tid 428] AH00418: Parent: Created child process 7628
+[Wed Sep 11 17:16:13.234945 2024] [mpm_winnt:notice] [pid 7628:tid 484] AH00354: Child: Starting 150 worker threads.
+[Wed Sep 11 17:16:14.234344 2024] [php:warn] [pid 7628:tid 1912] [client ::1:61986] PHP Warning:  require(C:\\xampp\\htdocs\\vmx-cloud-dev/vendor/autoload.php): Failed to open stream: No such file or directory in C:\\xampp\\htdocs\\vmx-cloud-dev\\public\\index.php on line 13
+[Wed Sep 11 17:16:14.234344 2024] [php:error] [pid 7628:tid 1912] [client ::1:61986] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\\xampp\\htdocs\\vmx-cloud-dev/vendor/autoload.php' (include_path='C:\\xampp\\php\\PEAR') in C:\\xampp\\htdocs\\vmx-cloud-dev\\public\\index.php:13\nStack trace:\n#0 C:\\xampp\\htdocs\\vmx-cloud-dev\\index.php(3): require()\n#1 {main}\n  thrown in C:\\xampp\\htdocs\\vmx-cloud-dev\\public\\index.php on line 13
+[Wed Sep 11 19:30:52.086832 2024] [php:error] [pid 7628:tid 1856] [client ::1:54370] script 'C:/xampp/htdocs/vmx-cloud-dev/blog/post.php' not found or unable to stat, referer: http://localhost/vmx-cloud-dev/blog/
